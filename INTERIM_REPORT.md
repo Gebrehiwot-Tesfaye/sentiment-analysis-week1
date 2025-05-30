@@ -220,7 +220,6 @@ Week 6: Documentation and deployment
 
 ### Sample Technical Analysis
 
-![Technical Indicators](path/to/technical_indicators.png)
 
 ```python
 # Example visualization code
@@ -229,22 +228,10 @@ analyzer.plot_moving_average()
 analyzer.plot_rsi()
 ```
 
-### Sentiment Distribution
 
-![Sentiment Analysis](path/to/sentiment_distribution.png)
 
 ## 7. Repository Structure
 
-```
-sentiment-analysis/
-├── notebooks/          # Analysis notebooks
-├── scripts/           # Core functionality
-├── data/             # Dataset storage
-├── tests/            # Unit tests
-└── docs/             # Documentation
-```
-
-## 8. References
 
 1. TA-Lib Documentation
 2. TextBlob NLP Library
