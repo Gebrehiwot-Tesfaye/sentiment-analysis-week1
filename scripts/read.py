@@ -26,6 +26,3 @@ def read(file_path):
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
 
-# # Example usage
-# df = load_file("your_file.csv")
-# print(df.head())
