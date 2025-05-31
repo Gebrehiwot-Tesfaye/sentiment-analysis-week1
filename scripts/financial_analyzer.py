@@ -5,6 +5,8 @@ from textblob import TextBlob
 # import talib as yf
 import yfinance as yf
 
+import pandas_ta as ta
+
 
 def load_historical_data(ticker):
     stock_data=pd.read_csv(f'../data/yfinance_data/{ticker}_historical_data.csv')
@@ -115,6 +117,29 @@ def calculateTechnicalIndicator(stock_data):
     macd_signal, macd, _ = yf.MACD(stock_data['Close'])
     stock_data['MACD'] =macd
     stock_data['MACD_Signal']=macd_signal
+
+
+# def calculateTechnicalIndicators(ticker_symbol):
+#     # Fetch historical data
+#     stock_data = yf.download(ticker_symbol, start="2022-01-01", end="2024-01-01")
+
+#     # Calculate technical indicators
+#     stock_data['SMA_20'] = ta.sma(stock_data['Close'], length=20)
+#     stock_data['EMA_20'] = ta.ema(stock_data['Close'], length=20)
+#     stock_data['RSI_14'] = ta.rsi(stock_data['Close'], length=14)
+    
+#     macd = ta.macd(stock_data['Close'])
+#     stock_data['MACD'] = macd['MACD_12_26_9']
+#     stock_data['MACD_Signal'] = macd['MACDs_12_26_9']
+#     stock_data['MACD_Hist'] = macd['MACDh_12_26_9']
+
+#     return stock_data
+
+# # Example usage
+# df = calculateTechnicalIndicators("AAPL")
+# print(df[['Close', 'SMA_20', 'EMA_20', 'RSI_14', 'MACD', 'MACD_Signal']].tail())
+
+    
     
     
 def technicalIndicatorsVsClosingPrice(stock_data_aapl,stock_data_amzn,stock_data_goog,stock_data_meta,stock_data_msft,stock_data_nvda,ticker):
